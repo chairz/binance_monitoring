@@ -21,7 +21,6 @@ def delete_order(orderId):
 def order():
 	api_method = '/order'
 	time = requests.get(END_POINT + '/time')
-	print(time.text)
 	serverTime = json.loads(time.text)['serverTime']
 	param = {'symbol':'LTCBTC',
 			'side':'BUY',
