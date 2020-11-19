@@ -20,3 +20,4 @@ This project is written using Python3 and tested on macOS environment. There are
   # Running
   Launch a terminal and execute `python3 user_stream.py`. The program will request for a delay threshold and if the connection to socket is successful, the program will prompt the message: `listening for events...`. Open another terminal and execute `python3 user_action.py` to simulate user actions to test the alert function of the web socket listener.
   
+![Alt text](https://github.com/chairz/binance_monitoring/blob/main/img/demo.png?raw=true "Demo Alert")
