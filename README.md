@@ -14,8 +14,14 @@ This project is written using Python3 and tested on macOS environment. There are
   'timestamp': serverTime}.
   Deleting an order requires an orderId field which can be obtained after completing an order.
   
-  # Installation
+  # Setting Up
   There may be some python dependencies package that requires installation. The missing packages will be prompt to you when executing the python file which can be installed using the python package manager `pip3 install <missing package>`
+  The programs retrieve the **api key** and **secret key** through environment variables. Export the keys to `binance_api` and `binance_secret` respectively. 
+  
+  `export binance_api=<your api key>`
+  
+  `export binance_secret=<your secret key>`
+  
   
   # Running
   Launch a terminal and execute `python3 user_stream.py`. The program will request for a delay threshold and if the connection to socket is successful, the program will prompt the message: `listening for events...`. Open another terminal and execute `python3 user_action.py` to simulate user actions to test the alert function of the web socket listener.
