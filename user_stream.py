@@ -34,9 +34,10 @@ def start_socket(listenkey, max_delay_ms):
 				if event_type == 'executionReport':
 					event_time = event_dict['E']
 					print('{},{}'.format(event_type, event_time))
-					now = round(datetime.datetime.now().timestamp() * 1000)
+					time = requests.get(END_POINT + '/time')
+					now = json.loads(time.text)['serverTime']
 					print(now)
-					diff = now -event_time
+					diff = now - event_time
 					print(diff)
 					if diff >= max_delay_ms:
 						print("ALERT! DELAY {}ms IS GREATER THAN THRESHOLD OF {}ms".format(diff, max_delay_ms))
